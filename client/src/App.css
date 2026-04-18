@@ -1,0 +1,17 @@
+/* App-level styles — most styling is done via Tailwind, this handles leftover needs */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Section title vertical rhythm helper */
+.section-title {
+  line-height: 1.1;
+}
+
+/* Smooth page scrolling */
+html {
+  scroll-behavior: smooth;
+}

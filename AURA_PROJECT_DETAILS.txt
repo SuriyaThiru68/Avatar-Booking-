@@ -1,0 +1,67 @@
+==========================================================================
+AURA: AI-AVATAR APPOINTMENT BOOKING SYSTEM - PROJECT SPECS
+==========================================================================
+
+1. PROJECT OVERVIEW
+-------------------
+Aura is an intelligent, high-fidelity appointment booking platform that uses 
+a generative AI "Talking Avatar" as its primary user interface. It 
+transforms the traditional scheduling experience into a human-like 
+conversation via text and voice.
+
+2. CORE FEATURES
+----------------
+[+] Conversational Booking: Users can book services by simply talking or 
+    typing (e.g., "Schedule a consultation for tomorrow at 10 AM").
+[+] Talking AI Avatar: Integrates real-time video generation to create an 
+    interactive avatar that "speaks" AI responses.
+[+] Voice-to-Text: Native integration with browser Speech Recognition for 
+    hands-free interaction.
+[+] Dynamic Booking Hub: An adaptive calendar module that UI-syncs with AI 
+    intent to finalize appointments.
+[+] Dual-Persona Dashboard:
+    - For Clients: Book, track, and manage session history.
+    - For Professionals: Manage availability, expertise, and client lists.
+[+] Intelligent Fallbacks: "Simulated Mode" ensures the demo works 
+    even if external AI services or databases are under maintenance.
+
+3. TECHNOLOGY STACK
+-------------------
+[Frontend]
+- React.js: Component-based UI framework.
+- Vite: Ultra-fast build tool and development server.
+- Tailwind CSS: Modern utility-first styling for high-fidelity UI.
+- Lucide React: Vector icons for a professional aesthetic.
+
+[Backend]
+- Node.js & Express: Scalable server-side runtime and API framework.
+- RESTful APIs: Standardized endpoints for chat and booking operations.
+
+[Database]
+- MongoDB Atlas: Cloud-hosted NoSQL database for appointments and users.
+- Mongoose: Object Data Modeling (ODM) for database schema management.
+
+[AI & Media Engines]
+- Google Gemini 1.5 Flash: The "brain" processing NLP and logic.
+- D-ID API: The "face" generating talking head videos from text.
+- Web Speech API: Handles browser-native Text-to-Speech & Speech-to-Text.
+
+4. WORKING MECHANISM (DATA FLOW)
+--------------------------------
+1. INPUT: User interaction via Microphone or Keyboard.
+2. AI PROCESSING: Message sent to Backend -> Processed by Google Gemini.
+3. LOGIC EXTRACTION: Gemini extracts Service Type, Date, and Time.
+4. AVATAR RESPONSE: Gemini's text is sent to D-ID API to generate a video clip.
+5. USER CONFIRMATION: Frontend displays video and updates the Booking UI.
+6. PERSISTENCE: Upon final confirmation, data is saved permanently to MongoDB.
+
+5. INSTALLATION & SETUP
+-----------------------
+1. Clone repository.
+2. Setup .env with: PORT, MONGODB_URI, DID_API_KEY, GEMINI_API_KEY.
+3. Run 'npm install' in root and 'client' folders.
+4. Start both servers using: 'npm run dev:all'
+
+==========================================================================
+Developed for Innovation in AI-Human Interaction.
+==========================================================================
